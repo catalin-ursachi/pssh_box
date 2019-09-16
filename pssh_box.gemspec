@@ -13,8 +13,6 @@ Gem::Specification.new do |spec|
   spec.homepage      = 'https://github.com/catalin-ursachi/pssh_box'
   spec.license       = 'MIT'
 
-  spec.metadata['allowed_push_host'] = 'http://mygemserver.com'
-
   spec.metadata['homepage_uri'] = spec.homepage
 
   # Specify which files should be added to the gem when it is released.

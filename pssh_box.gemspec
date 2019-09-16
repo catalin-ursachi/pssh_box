@@ -8,16 +8,14 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Catalin Ursachi']
   spec.email         = ['catalin.ursachi@softwire.com']
 
-  spec.summary       = 'Write a short summary, because RubyGems requires one.'
-  spec.description   = 'Write a longer description or delete this line.'
-  spec.homepage      = 'http://www.example.com'
+  spec.summary       = 'A builder for PSSH boxes used in content encryption, as per the specification at'\
+    ' https://w3c.github.io/encrypted-media/format-registry/initdata/cenc.html.'
+  spec.homepage      = 'https://github.com/catalin-ursachi/pssh_box'
   spec.license       = 'MIT'
 
   spec.metadata['allowed_push_host'] = 'http://mygemserver.com'
 
   spec.metadata['homepage_uri'] = spec.homepage
-  spec.metadata['source_code_uri'] = 'http://www.example.com'
-  spec.metadata['changelog_uri'] = 'http://www.example.com'
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.

@@ -2,7 +2,15 @@ require 'uuid'
 
 module PsshBox
   class Builder
-    # The logic in this method is based on the PSSH implementation at: https://github.com/google/shaka-packager/tree/master/packager/tools/pssh.
+    # Build a PSSH box using the given parameters.
+    # The logic in this method is based on the PSSH implementation at:
+    # https://github.com/google/shaka-packager/tree/master/packager/tools/pssh.
+    #
+    # Params:
+    # - pssh_version: 0 or 1; for version 1, the key IDs will be included in the PSSH box.
+    # - system_id: the DRM provider system ID
+    # - pssh_data: a byte array containing the DRM-specific data (e.g. an encoded protocol buffer for Widevine, or a WRMHEADER for PlayReady)
+    # - key_ids: the key IDs to be included in a version 1 box; ignored for version 0 boxes.
     def self.build_pssh_box(pssh_version, system_id, pssh_data, key_ids = [])
       unless pssh_version == 0 || pssh_version == 1
         raise ArgumentError, "PSSH version #{pssh_version} is not supported; allowed values are 0 and 1."

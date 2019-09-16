@@ -1,8 +1,8 @@
 # PsshBox
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/pssh_box`. To experiment with that code, run `bin/console` for an interactive prompt.
+A builder for PSSH boxes used in content encryption, as per the specification at https://w3c.github.io/encrypted-media/format-registry/initdata/cenc.html.
 
-TODO: Delete this and the text above, and describe your gem
+The implementation was based on the the Shaka-Packager PSSH tool available at https://github.com/google/shaka-packager/tree/master/packager/tools/pssh. The tool was used to generate & validate the unit test values.
 
 ## Installation
 
@@ -22,7 +22,17 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+A version 0 PSSH box can be generated with:
+
+```ruby
+PsshBox::Builder.build_pssh_box(0, 'edef8ba9-79d6-4ace-a3c8-27dcd51d21ed', pssh_data_bytes)
+```
+
+A version 1 PSSH box can be generated with:
+
+```ruby
+PsshBox::Builder.build_pssh_box(1, 'edef8ba9-79d6-4ace-a3c8-27dcd51d21ed', pssh_data_bytes, [key_id])
+```
 
 ## Development
 

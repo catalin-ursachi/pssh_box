@@ -1,6 +1,5 @@
-require "pssh_box/version"
+require 'pssh_box/version'
+require 'pssh_box/builder'
 
 module PsshBox
-  class Error < StandardError; end
-  # Your code goes here...
 end

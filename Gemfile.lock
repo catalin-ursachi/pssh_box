@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    pssh_box (0.0.1)
+    pssh_box (0.1.0)
       ruby-uuid (~> 0.0.1)
 
 GEM
